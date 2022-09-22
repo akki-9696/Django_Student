@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student_details</title>
+</head>
+<div align="Center">
+<body >
+<h1>Welcome to Student Information Page</h1>
+
+{% if data %}
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>First_name</th>
+        <th>Last_name</th>
+        <th>Age</th>
+        <th>DOB</th>
+        <th>City</th>
+    </tr>
+    {% for d in data %}
+    <tr>
+        <td>{{d.id}}</td>
+        <td>{{d.first_name}}</td>
+        <td>{{d.last_name}}</td>
+        <td>{{d.age}}</td>
+        <td>{{d.DOB}}</td>
+        <td>{{d.City}}</td>
+    </tr>
+    {% endfor %}
+</table>
+ {%else%}
+    <h3>no data recived</h3>
+    {%endif%}
+</body>
+</div>
+</html>
