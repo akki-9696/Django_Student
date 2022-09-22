@@ -1,11 +1,14 @@
 <!DOCTYPE html>
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Student_details</title>
 </head>
-<div align="Center">
+<div align="Center" class="background-image">
+<!--    <img src="{%static 'images/images.jpg'%}">-->
 <body >
+
 <h1>Welcome to Student Information Page</h1>
 
 {% if data %}
@@ -33,5 +36,18 @@
     <h3>no data recived</h3>
     {%endif%}
 </body>
+    <style>
+    *{
+    margin:0;
+    padding:0;
+    }
+        .background-image{
+        background-image : url("{%static 'images/images.jpg'%}");
+        background-size:cover;
+        background-repeat:no-repeat;
+        width: 200px;
+        height: 100vh;
+        }
+    </style>
 </div>
 </html>

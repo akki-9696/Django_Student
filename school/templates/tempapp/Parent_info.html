@@ -1,22 +1,23 @@
 <!DOCTYPE html>
+{%load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>parent_info</title>
 </head>
-<body>
-<div align="center">
-<h1>Welcome to Parents_Page</h1>
+<body >
+<div align="center" class="background-image">
+<h1 style="color:yellow;">Welcome to Parents_Page</h1>
 
     {%if data %}
-    <table border="1">
-    <tr>
+    <table border="5" style="color:red;">
+    <tr style="color:yellow;">
         <th>ID</th>
         <th>First_name</th>
         <th>Last_name</th>
     </tr>
     {% for d in data %}
-    <tr>
+    <tr style="color:yellow;">
         <td>{{d.id}}</td>
         <td>{{d.first_name}}</td>
         <td>{{d.last_name}}</td>
@@ -26,7 +27,18 @@
     {%else%}
     <h1>NO data Recived!!</h1>
     {%endif%}
-
 </div>
+
+<style>
+ *{
+ margin: 0
+ padding:0
+ }
+    .background-image{
+    background-image : url("{%static 'images/images_P.jpg'%}");
+    background-size:cover;
+    height : 100vh;
+    }
+</style>
 </body>
 </html>
